@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Text to Speech</h1>
+        <textarea id="text" rows="10" cols="30" placeholder="Enter your text here..."></textarea><br>
+        <button onclick="textToSpeech()">Generate Speech</button>
+        <button onclick="gttsSpeech()">Generate with gTTS</button>
+        <button class="nav-button" onclick="location.href='{{ url_for('speech_to_text') }}'">Go to Speech to Text</button>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
